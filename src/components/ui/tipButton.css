@@ -1,9 +1,14 @@
 .tip_button {
-  font-size: 1.5rem;
+  font: normal 700 1.5rem "Space Mono", monospace;
   background-color: hsl(185, 47%, 20%);
   border: none;
   border-radius: 5px;
   color: hsl(180, 5%, 96%);
   width: 150px;
   height: 50px;
+}
+
+.tip_button:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 62%, 76%);
 }

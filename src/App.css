@@ -7,10 +7,11 @@
 }
 
 .content-wrapper {
+  width: 343px;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 20px;
 }
 

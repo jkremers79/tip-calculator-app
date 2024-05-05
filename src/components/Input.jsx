@@ -6,9 +6,10 @@ export const Input = () => {
   return (
     <>
       <div className="input_wrapper">
-        <div className="bill"></div>
-        <span className="header_tag">Bill</span>
-        <UserInput />
+        <div className="bill">
+          <span className="header_tag">Bill</span>
+          <UserInput />
+        </div>
         <div className="select_tip">
           <span className="header_tag">Select Tip %</span>
           <div className="buttons_wrapper">
