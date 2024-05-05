@@ -1,0 +1,8 @@
+.tip_button {
+  background-color: hsl(185, 47%, 20%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(180, 5%, 96%);
+  width: 100px;
+  height: 35px;
+}

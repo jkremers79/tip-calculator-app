@@ -1,13 +1,19 @@
 import { useState } from "react";
 import "./App.css";
+import { Calculator } from "./components/Calculator";
+import { Input } from "./components/Input";
 
 function App() {
   const [tipPercentage, setTipPercentage] = useState(0);
 
   return (
     <>
-      Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-      person Total / person Reset
+      <div className="wrapper">
+        <div className="content-wrapper">
+          <Input />
+          <Calculator />
+        </div>
+      </div>
       <div className="attribution">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
