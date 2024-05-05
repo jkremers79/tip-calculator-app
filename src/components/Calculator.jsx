@@ -4,9 +4,20 @@ export const Calculator = () => {
   return (
     <>
       <div className="calculator_wrapper">
-        <div className="amount"></div>
-        Tip Amount / person
-        <div className="total">Total / person</div>
+        <div className="text_wrapper">
+          <div>
+            <p>Tip Amount</p>
+            <p className="small_text">/ person</p>
+          </div>
+          <p>placeholder</p>
+        </div>
+        <div className="text_wrapper">
+          <div>
+            <p>Total</p>
+            <p className="small_text">/ person</p>
+          </div>
+          <p>placeholder</p>
+        </div>
         <button>Reset</button>
       </div>
     </>

@@ -1,7 +1,5 @@
 body {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
+  font: normal 700 1rem "Space Mono", monospace;
   margin: 0;
   padding: 0;
   background-color: hsl(185, 41%, 84%);
