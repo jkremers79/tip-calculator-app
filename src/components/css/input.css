@@ -1,12 +1,38 @@
 .input_wrapper {
   border: 2px solid black;
+  width: 375px;
+}
+
+input {
+  font-size: 1.5rem;
+  border: none;
+  text-align: right;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  width: 80%;
+  padding: 0.5rem;
 }
 
 .custom_tip {
-  background-color: hsl(185, 47%, 20%);
+  font-size: 1.5rem;
+  text-align: right;
+  padding-right: 10px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
   border: none;
   border-radius: 5px;
-  color: hsl(180, 5%, 96%);
-  width: 100px;
-  height: 35px;
+  width: 138px;
+  height: 47px;
+}
+
+span.header_tag {
+  color: hsl(186, 14%, 43%);
+}
+
+.buttons_wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
