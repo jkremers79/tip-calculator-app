@@ -18,7 +18,7 @@ export const Calculator = () => {
           </div>
           <p>placeholder</p>
         </div>
-        <button>Reset</button>
+        <button className="reset_button">Reset</button>
       </div>
     </>
   );

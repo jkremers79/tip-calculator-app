@@ -1,3 +1,8 @@
+.tip_selector {
+  display: flex;
+  flex-direction: column;
+}
+
 .bill {
   display: flex;
   flex-direction: column;
@@ -20,13 +25,24 @@
 
 .text_wrapper_people {
   display: flex;
-  width: 80%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
 
   span {
     margin: 0.5rem 0 0.5rem 0;
   }
+
+  .err_msg {
+    padding-right: 1rem;
+  }
+}
+
+.header_tag {
+  padding-left: 0.75rem;
+  margin: 0.5rem 0 0.5rem 0;
+  align-self: flex-start;
+  color: hsl(186, 14%, 43%);
 }
 
 .buttons_wrapper {
@@ -50,23 +66,21 @@
   color: hsl(186, 14%, 43%);
   border: none;
   border-radius: 5px;
-  width: 113px;
-  height: 48px;
+  width: 108px;
+  height: 38px;
 }
 
 .custom_tip:focus {
   outline-color: hsl(172, 67%, 45%);
 }
 
-.header_tag {
-  padding-left: 0.75rem;
-  margin: 0.5rem 0 0.5rem 0;
-  align-self: flex-start;
-  color: hsl(186, 14%, 43%);
-}
-
 @media screen and (min-width: 1024px) {
-  .input_wrapper {
+  .tip_selector {
     width: 425px;
+    gap: 1rem;
+  }
+
+  .input_wrapper {
+    width: 100%;
   }
 }

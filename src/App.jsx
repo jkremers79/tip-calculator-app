@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Calculator } from "./components/Calculator";
-import { Input } from "./components/Input";
+import { TipSelector } from "./components/TipSelector";
 
 function App() {
   const [tipPercentage, setTipPercentage] = useState(0);
@@ -10,7 +10,7 @@ function App() {
     <>
       <div className="wrapper">
         <div className="content-wrapper">
-          <Input />
+          <TipSelector />
           <Calculator />
         </div>
       </div>

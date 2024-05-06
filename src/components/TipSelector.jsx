@@ -1,13 +1,13 @@
-import "./css/input.css";
+import "./css/tipselector.css";
 import dollarIcon from "../assets/images/icon-dollar.svg";
 import personIcon from "../assets/images/icon-person.svg";
 import { TipButton } from "./ui/TipButton";
 import { UserInput } from "./ui/UserInput";
 
-export const Input = () => {
+export const TipSelector = () => {
   return (
     <>
-      <div className="input_wrapper">
+      <div className="tip_selector">
         <div className="bill">
           <span className="header_tag">Bill</span>
           <div className="input_wrapper">

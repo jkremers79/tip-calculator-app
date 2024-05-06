@@ -4,8 +4,8 @@
   border: none;
   border-radius: 5px;
   color: hsl(180, 5%, 96%);
-  width: 125px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
 }
 
 .tip_button:hover {

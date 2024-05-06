@@ -30,7 +30,7 @@
     width: fit-content;
     display: flex;
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: 2rem;
     background-color: hsl(0, 0%, 100%);
     padding: 2rem;
     border-radius: 20px;
