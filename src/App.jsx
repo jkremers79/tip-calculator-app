@@ -6,7 +6,7 @@ import { TipSelector } from "./components/TipSelector";
 function App() {
   const [tipPercentage, setTipPercentage] = useState(0);
   const [bill, setBill] = useState(0);
-  const [numberOfPeople, setNumberOfPeople] = useState(0);
+  const [numberOfPeople, setNumberOfPeople] = useState(1);
 
   return (
     <>

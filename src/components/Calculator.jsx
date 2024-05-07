@@ -2,7 +2,8 @@ import "./css/calculator.css";
 
 export const Calculator = ({ people, bill, tip }) => {
   const totalTip = (bill / 100) * tip;
-  const totalPerPerson = (Number(bill) + Number(totalTip)) / people;
+  const tipPerPerson = totalTip / people;
+  const totalPerPerson = (Number(bill) + totalTip) / people;
 
   return (
     <>
@@ -12,7 +13,7 @@ export const Calculator = ({ people, bill, tip }) => {
             <p>Tip Amount</p>
             <p className="small_text">/ person</p>
           </div>
-          <p className="calculator">{`$${totalTip}`}</p>
+          <p className="calculator">{`$${tipPerPerson}`}</p>
         </div>
         <div className="text_wrapper">
           <div>
