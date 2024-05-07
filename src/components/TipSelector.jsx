@@ -4,7 +4,14 @@ import personIcon from "../assets/images/icon-person.svg";
 import { TipButton } from "./ui/TipButton";
 import { UserInput } from "./ui/UserInput";
 
-export const TipSelector = () => {
+export const TipSelector = ({
+  bill,
+  setBill,
+  people,
+  setPeople,
+  tip,
+  setTip,
+}) => {
   return (
     <>
       <div className="tip_selector">
@@ -12,18 +19,22 @@ export const TipSelector = () => {
           <span className="header_tag">Bill</span>
           <div className="input_wrapper">
             <img src={dollarIcon} className="input_icon"></img>
-            <UserInput />
+            <UserInput fn1={bill} fn2={setBill} />
           </div>
         </div>
         <div className="select_tip">
           <span className="header_tag">Select Tip %</span>
           <div className="buttons_wrapper">
-            <TipButton description="5%" />
-            <TipButton description="10%" />
-            <TipButton description="15%" />
-            <TipButton description="25%" />
-            <TipButton description="50%" />
-            <input className="custom_tip" placeholder="Custom"></input>
+            <TipButton description="5%" perc="5" clickFn={setTip} />
+            <TipButton description="10%" perc="10" clickFn={setTip} />
+            <TipButton description="15%" perc="15" clickFn={setTip} />
+            <TipButton description="25%" perc="25" clickFn={setTip} />
+            <TipButton description="50%" perc="50" clickFn={setTip} />
+            <input
+              className="custom_tip"
+              placeholder="Custom"
+              onChange={(e) => setTip(e.target.value)}
+            ></input>
           </div>
         </div>
         <div className="people">
@@ -33,7 +44,7 @@ export const TipSelector = () => {
           </div>
           <div className="input_wrapper">
             <img src={personIcon} className="input_icon"></img>
-            <UserInput />
+            <UserInput fn1={people} fn2={setPeople} />
           </div>
         </div>
       </div>

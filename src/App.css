@@ -8,7 +8,7 @@
 
 .content-wrapper {
   margin-top: 20rem;
-  width: 343px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);

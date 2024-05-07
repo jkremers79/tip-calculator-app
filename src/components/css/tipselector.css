@@ -39,7 +39,7 @@
 }
 
 .header_tag {
-  padding-left: 0.75rem;
+  padding-left: 1rem;
   margin: 0.5rem 0 0.5rem 0;
   align-self: flex-start;
   color: hsl(186, 14%, 43%);
@@ -47,7 +47,7 @@
 
 .buttons_wrapper {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -82,5 +82,12 @@
 
   .input_wrapper {
     width: 100%;
+  }
+
+  .header_tag {
+    padding-left: 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
+    align-self: flex-start;
+    color: hsl(186, 14%, 43%);
   }
 }

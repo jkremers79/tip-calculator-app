@@ -5,13 +5,22 @@ import { TipSelector } from "./components/TipSelector";
 
 function App() {
   const [tipPercentage, setTipPercentage] = useState(0);
+  const [bill, setBill] = useState(0);
+  const [numberOfPeople, setNumberOfPeople] = useState(0);
 
   return (
     <>
       <div className="wrapper">
         <div className="content-wrapper">
-          <TipSelector />
-          <Calculator />
+          <TipSelector
+            bill={bill}
+            setBill={setBill}
+            people={numberOfPeople}
+            setPeople={setNumberOfPeople}
+            tip={tipPercentage}
+            setTip={setTipPercentage}
+          />
+          <Calculator people={numberOfPeople} bill={bill} tip={tipPercentage} />
         </div>
       </div>
       {/* <div className="attribution">

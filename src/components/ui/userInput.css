@@ -6,9 +6,17 @@
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
   padding: 0.5rem;
-  width: 90%;
+  width: 85%;
+  margin-left: 0.25rem;
 }
 
 .user_input:focus {
   outline-color: hsl(172, 67%, 45%);
+}
+
+@media screen and (min-width: 1024px) {
+  .user_input {
+    width: 90%;
+    margin-left: 0;
+  }
 }
