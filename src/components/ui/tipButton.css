@@ -12,3 +12,8 @@
   color: hsl(183, 100%, 15%);
   background-color: hsl(172, 62%, 76%);
 }
+
+.tip_button.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(185, 47%, 20%);
+}

@@ -3,14 +3,17 @@ import dollarIcon from "../assets/images/icon-dollar.svg";
 import personIcon from "../assets/images/icon-person.svg";
 import { TipButton } from "./ui/TipButton";
 import { UserInput } from "./ui/UserInput";
+import { useState } from "react";
 
 export const TipSelector = ({
   bill,
   setBill,
   people,
   setPeople,
-  tip,
-  setTip,
+  manualTip,
+  setManualTip,
+  setTipButton,
+  activeTipButton,
 }) => {
   return (
     <>
@@ -25,22 +28,48 @@ export const TipSelector = ({
         <div className="select_tip">
           <span className="header_tag">Select Tip %</span>
           <div className="buttons_wrapper">
-            <TipButton description="5%" perc="5" clickFn={setTip} />
-            <TipButton description="10%" perc="10" clickFn={setTip} />
-            <TipButton description="15%" perc="15" clickFn={setTip} />
-            <TipButton description="25%" perc="25" clickFn={setTip} />
-            <TipButton description="50%" perc="50" clickFn={setTip} />
+            <TipButton
+              description="5%"
+              activeTipButton={activeTipButton}
+              id="btn1"
+              clickFn={setTipButton}
+            />
+            <TipButton
+              description="10%"
+              activeTipButton={activeTipButton}
+              id="btn2"
+              clickFn={setTipButton}
+            />
+            <TipButton
+              description="15%"
+              activeTipButton={activeTipButton}
+              id="btn3"
+              clickFn={setTipButton}
+            />
+            <TipButton
+              description="25%"
+              activeTipButton={activeTipButton}
+              id="btn4"
+              clickFn={setTipButton}
+            />
+            <TipButton
+              description="50%"
+              activeTipButton={activeTipButton}
+              id="btn5"
+              clickFn={setTipButton}
+            />
             <input
               className="custom_tip"
               placeholder="Custom"
-              onChange={(e) => setTip(e.target.value)}
+              value={manualTip}
+              onChange={(e) => setManualTip(e)}
             ></input>
           </div>
         </div>
         <div className="people">
           <div className="text_wrapper_people">
             <span className="header_tag"> Number of People</span>
-            <span className="err_msg">test</span>
+            <span className="err_msg"></span>
           </div>
           <div className="input_wrapper">
             <img src={personIcon} className="input_icon"></img>

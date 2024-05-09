@@ -1,9 +1,17 @@
 import "./css/calculator.css";
 
-export const Calculator = ({ people, bill, tip }) => {
+export const Calculator = ({ people, bill, tip, clickFn }) => {
   const totalTip = (bill / 100) * tip;
-  const tipPerPerson = totalTip / people;
-  const totalPerPerson = (Number(bill) + totalTip) / people;
+  let tipPerPerson = totalTip / people;
+  let totalPerPerson = (Number(bill) + totalTip) / people;
+
+  if (Number.isNaN(tipPerPerson) || Number.isNaN(totalPerPerson)) {
+    tipPerPerson = 0;
+    totalPerPerson = 0;
+  } else {
+    tipPerPerson = tipPerPerson.toFixed(2);
+    totalPerPerson = totalPerPerson.toFixed(2);
+  }
 
   return (
     <>
@@ -22,7 +30,9 @@ export const Calculator = ({ people, bill, tip }) => {
           </div>
           <p className="calculator">{`$${totalPerPerson}`}</p>
         </div>
-        <button className="reset_button">RESET</button>
+        <button className="reset_button" onClick={clickFn}>
+          RESET
+        </button>
       </div>
     </>
   );
