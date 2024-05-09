@@ -10,6 +10,10 @@
   margin-left: 0.25rem;
 }
 
+.user_input.error {
+  border: 1px solid hsl(9, 32%, 58%);
+}
+
 .user_input:focus {
   outline-color: hsl(172, 67%, 45%);
 }

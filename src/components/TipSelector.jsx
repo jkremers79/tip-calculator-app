@@ -3,7 +3,6 @@ import dollarIcon from "../assets/images/icon-dollar.svg";
 import personIcon from "../assets/images/icon-person.svg";
 import { TipButton } from "./ui/TipButton";
 import { UserInput } from "./ui/UserInput";
-import { useState } from "react";
 
 export const TipSelector = ({
   bill,
@@ -15,6 +14,12 @@ export const TipSelector = ({
   setTipButton,
   activeTipButton,
 }) => {
+  let err = false;
+
+  if (people <= 0) {
+    err = true;
+  }
+
   return (
     <>
       <div className="tip_selector">
@@ -22,7 +27,7 @@ export const TipSelector = ({
           <span className="header_tag">Bill</span>
           <div className="input_wrapper">
             <img src={dollarIcon} className="input_icon"></img>
-            <UserInput fn1={bill} fn2={setBill} />
+            <UserInput fn1={bill} fn2={setBill} error={false} />
           </div>
         </div>
         <div className="select_tip">
@@ -69,11 +74,13 @@ export const TipSelector = ({
         <div className="people">
           <div className="text_wrapper_people">
             <span className="header_tag"> Number of People</span>
-            <span className="err_msg"></span>
+            <span className={`err_msg ${err ? "active" : ""}`}>
+              Cannot be 0
+            </span>
           </div>
           <div className="input_wrapper">
             <img src={personIcon} className="input_icon"></img>
-            <UserInput fn1={people} fn2={setPeople} />
+            <UserInput fn1={people} fn2={setPeople} error={err} />
           </div>
         </div>
       </div>

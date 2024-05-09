@@ -77,7 +77,6 @@ function App() {
   }
 
   function handleCustomTip(e) {
-    console.log(e);
     setActiveTipButton({
       btn1: false,
       btn2: false,

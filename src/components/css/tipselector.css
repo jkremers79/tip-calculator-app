@@ -35,6 +35,13 @@
 
   .err_msg {
     padding-right: 1rem;
+    display: none;
+    color: hsl(12, 32%, 56%);
+  }
+
+  .err_msg.active {
+    padding-right: 1rem;
+    display: block;
   }
 }
 
