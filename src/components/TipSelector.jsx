@@ -14,22 +14,39 @@ export const TipSelector = ({
   setTipButton,
   activeTipButton,
 }) => {
-  let err = false;
+  let errPeople = false;
+  let errBill = false;
+  let errCustomTip = false;
 
   if (people <= 0) {
-    err = true;
+    errPeople = true;
+  }
+
+  if (bill < 0) {
+    errBill = true;
+  }
+
+  if (manualTip < 0) {
+    errCustomTip = true;
   }
 
   return (
     <>
       <div className="tip_selector">
         <div className="bill">
-          <span className="header_tag">Bill</span>
+          <div className="text_wrapper">
+            <span className="header_tag">Bill</span>
+
+            <span className={`err_msg ${errBill ? "active" : ""}`}>
+              Negative number selected
+            </span>
+          </div>
           <div className="input_wrapper">
             <img src={dollarIcon} className="input_icon"></img>
-            <UserInput fn1={bill} fn2={setBill} error={false} />
+            <UserInput fn={bill} setFn={setBill} error={errBill} />
           </div>
         </div>
+
         <div className="select_tip">
           <span className="header_tag">Select Tip %</span>
           <div className="buttons_wrapper">
@@ -64,39 +81,27 @@ export const TipSelector = ({
               clickFn={setTipButton}
             />
             <input
-              className="custom_tip"
+              className={`custom_tip ${errCustomTip ? "error" : ""}`}
               placeholder="Custom"
               value={manualTip}
+              type="number"
               onChange={(e) => setManualTip(e)}
             ></input>
           </div>
         </div>
         <div className="people">
-          <div className="text_wrapper_people">
+          <div className="text_wrapper">
             <span className="header_tag"> Number of People</span>
-            <span className={`err_msg ${err ? "active" : ""}`}>
-              Cannot be 0
+            <span className={`err_msg ${errPeople ? "active" : ""}`}>
+              Cannot be 0 or lower
             </span>
           </div>
           <div className="input_wrapper">
             <img src={personIcon} className="input_icon"></img>
-            <UserInput fn1={people} fn2={setPeople} error={err} />
+            <UserInput fn={people} setFn={setPeople} error={errPeople} />
           </div>
         </div>
       </div>
     </>
   );
 };
-
-// ### Primary
-
-// - Strong cyan: hsl(172, 67%, 45%)
-
-// ### Neutral
-
-// - Very dark cyan: hsl(183, 100%, 15%)
-// - Dark grayish cyan: hsl(186, 14%, 43%)
-// - Grayish cyan: hsl(184, 14%, 56%)
-// - Light grayish cyan: hsl(185, 41%, 84%)
-// - Very light grayish cyan: hsl(189, 41%, 97%)
-// - White: hsl(0, 0%, 100%)

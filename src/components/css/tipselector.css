@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.text_wrapper_people {
+.text_wrapper {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -36,6 +36,7 @@
   .err_msg {
     padding-right: 1rem;
     display: none;
+    font-size: 0.75rem;
     color: hsl(12, 32%, 56%);
   }
 
@@ -43,6 +44,10 @@
     padding-right: 1rem;
     display: block;
   }
+}
+
+.custom_tip.error {
+  border: 1px solid hsl(9, 32%, 58%);
 }
 
 .header_tag {

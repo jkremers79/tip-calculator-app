@@ -1,12 +1,12 @@
 import "./userInput.css";
 
-export const UserInput = ({ fn1, fn2, error }) => {
-  console.log(error);
+export const UserInput = ({ fn, setFn, error }) => {
   return (
     <input
       className={`user_input ${error ? "error" : ""}`}
-      value={fn1}
-      onChange={(e) => fn2(e.target.value)}
+      value={fn}
+      type="number"
+      onChange={(e) => setFn(e.target.value)}
     ></input>
   );
 };

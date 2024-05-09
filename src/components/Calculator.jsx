@@ -5,7 +5,7 @@ export const Calculator = ({ people, bill, tip, clickFn }) => {
   let tipPerPerson = totalTip / people;
   let totalPerPerson = (Number(bill) + totalTip) / people;
 
-  if (Number.isNaN(tipPerPerson) || Number.isNaN(totalPerPerson)) {
+  if (people <= 0 || tip < 0 || bill < 0) {
     tipPerPerson = 0;
     totalPerPerson = 0;
   } else {
