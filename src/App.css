@@ -20,12 +20,10 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
 }
 
 .content-wrapper {
-  margin: 20rem 0 5rem 0;
+  margin-top: 15rem;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -35,6 +33,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .attribution {
+  margin: 3rem 0 0.5rem 0;
   font-size: 11px;
   text-align: center;
 }
@@ -52,5 +51,9 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: hsl(0, 0%, 100%);
     padding: 2rem;
     border-radius: 20px;
+  }
+  .wrapper {
+    height: 100vh;
+    width: 100vw;
   }
 }
